@@ -1,0 +1,30 @@
+<div class="px-6 py-8">
+  <div class="text-3xl font-extrabold text-orange-600 mb-6">
+    Late-Night Cravings? Order Your Favorite Dishes Now!
+  </div>
+
+  @for(restaurant of restaurantDishes; track restaurant.id){
+    <div class="rounded-lg shadow-md mb-8 bg-white">
+      <div class="p-6 bg-gray-50 rounded-t-lg border-b border-gray-200">
+        <h2 class="text-2xl font-bold text-orange-600">{{ restaurant.name }}</h2>
+        <p class="text-gray-500 mt-2">{{ restaurant.description }}</p>
+        <p class="text-gray-700 mt-2 font-medium">New Town, Kolkata</p>
+      </div>
+
+      <div class="p-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+          @for(foodItem of restaurant.dishes; track foodItem.id){
+            <app-menu-item
+              [imageSrc]="foodItem.imageSource"
+              [itemName]="foodItem.foodItemName"
+              [orderPage]="true"
+              [id]="foodItem.id"
+              [price]="foodItem.price"
+              [restaurantID]="restaurant.id"
+            ></app-menu-item>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</div>

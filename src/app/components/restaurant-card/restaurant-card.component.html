@@ -1,0 +1,39 @@
+<div 
+  (click)="navigateToOrder()" 
+  class="w-[250px] bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 cursor-pointer border border-gray-200"
+>
+  <!-- Image Section -->
+  <div>
+    <img 
+      class="rounded-t-lg w-full h-40 object-cover" 
+      [src]="imageSrc" 
+      alt="Restaurant Image" 
+    />
+  </div>
+
+  <!-- Restaurant Name -->
+  <div class="text-lg font-semibold text-orange-500 text-center py-2 px-4 truncate">
+    {{ name }}
+  </div>
+
+  <!-- Cuisine and Price -->
+  <div class="flex justify-between items-center px-4 py-1">
+    <div class="text-sm text-gray-500 truncate">
+      {{ cuisines[0] }} • {{ cuisines[1] }}
+    </div>
+    <div class="text-sm font-semibold text-gray-700">
+      ₹{{ price }}
+    </div>
+  </div>
+
+  <!-- Location and Rating -->
+  <div class="flex justify-between items-center px-4 py-2 bg-gray-50">
+    <div class="text-sm text-gray-500 truncate">
+      {{ location }}
+    </div>
+    <div class="flex items-center text-sm font-bold text-orange-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 5.9l1.45 2.94 3.25.47-2.35 2.29.55 3.23L12 13.77 8.1 15.83l.55-3.23-2.35-2.29 3.25-.47L12 5.9z"/></svg>
+      {{ rating }}
+    </div>
+  </div>
+</div>

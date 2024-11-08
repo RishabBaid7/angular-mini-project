@@ -1,0 +1,120 @@
+<footer class="bg-gray-900 text-gray-300 py-10">
+  <!-- Food Delivery Cities Section -->
+  <div class="flex justify-center mb-8">
+    <div>
+      <div class="text-2xl font-bold text-orange-400 mb-4">Cities with Food Delivery</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        @for(city of cityList ; track city.id){
+          <div
+            (click)="navigateToOrder()"
+            class="rounded-md p-3 text-center bg-gray-800 hover:bg-orange-500 transition-colors cursor-pointer"
+          >
+            Order Food Online in {{ city.name }}
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Grocery Delivery Cities Section -->
+  <div class="flex justify-center mb-8">
+    <div>
+      <div class="text-2xl font-bold text-orange-400 mb-4">Cities with Grocery Delivery</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        @for(city of cityList ; track city.id){
+          <div
+            (click)="navigateToOrder()"
+            class="rounded-md p-3 text-center bg-gray-800 hover:bg-orange-500 transition-colors cursor-pointer"
+          >
+            Order Grocery Delivery in {{ city.name }}
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Links Section -->
+  <div class="container mx-auto flex flex-col items-center md:flex-row md:justify-between bg-gray-800 p-6 rounded-lg">
+    <div class="flex items-center mb-6 md:mb-0">
+      <img
+        src="https://media-assets.swiggy.com/portal/testing/seo-home/Group.svg"
+        alt="Logo"
+        class="h-10 mr-2"
+      />
+      <span class="text-gray-500">&copy; 2024 Swiggy Limited</span>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+      <!-- Company Section -->
+      <div>
+        <h4 class="font-semibold text-orange-400">Company</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="https://www.swiggy.com/about" target="_blank" class="hover:text-orange-500">About Us</a></li>
+          <li><a href="https://www.swiggy.com/corporate/" target="_blank" class="hover:text-orange-500">Swiggy Corporate</a></li>
+          <li><a href="https://www.swiggy.com/careers" target="_blank" class="hover:text-orange-500">Careers</a></li>
+          <li><a href="https://www.swiggy.com/team" target="_blank" class="hover:text-orange-500">Team</a></li>
+        </ul>
+      </div>
+      <!-- Contact Us Section -->
+      <div>
+        <h4 class="font-semibold text-orange-400">Contact Us</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="https://www.swiggy.com/support" class="hover:text-orange-500">Help &amp; Support</a></li>
+          <li><a href="https://partner-with-us.swiggy.com/onboard#/swiggy" target="_blank" class="hover:text-orange-500">Partner with Us</a></li>
+          <li><a href="https://ride.swiggy.com" target="_blank" class="hover:text-orange-500">Ride with Us</a></li>
+        </ul>
+      </div>
+      <!-- Legal Section -->
+      <div>
+        <h4 class="font-semibold text-orange-400">Legal</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="https://www.swiggy.com/terms-and-conditions" target="_blank" class="hover:text-orange-500">Terms &amp; Conditions</a></li>
+          <li><a href="https://www.swiggy.com/cookie-policy" target="_blank" class="hover:text-orange-500">Cookie Policy</a></li>
+          <li><a href="https://www.swiggy.com/privacy-policy" target="_blank" class="hover:text-orange-500">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <!-- Available Cities Section -->
+      <div>
+        <h4 class="font-semibold text-orange-400">Available In</h4>
+        <ul class="mt-2 space-y-2">
+          <li><a href="/city/bangalore" class="capitalize hover:text-orange-500">Bangalore</a></li>
+          <li><a href="/city/gurgaon" class="capitalize hover:text-orange-500">Gurgaon</a></li>
+          <li><a href="/city/hyderabad" class="capitalize hover:text-orange-500">Hyderabad</a></li>
+          <li><a href="/city/delhi" class="capitalize hover:text-orange-500">Delhi</a></li>
+          <li><a href="/city/mumbai" class="capitalize hover:text-orange-500">Mumbai</a></li>
+          <li><a href="/city/pune" class="capitalize hover:text-orange-500">Pune</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Social Links and App Links -->
+  <div class="mt-8 text-center">
+    <div class="mb-4 font-semibold">Follow Us:</div>
+    <div class="flex justify-center space-x-4 mb-4">
+      <a href="https://www.linkedin.com/company/swiggy-in/" target="_blank" class="hover:text-orange-500">
+        <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Linkedin.svg" alt="LinkedIn" class="h-6">
+      </a>
+      <a href="https://www.instagram.com/swiggyindia/?hl=en" target="_blank" class="hover:text-orange-500">
+        <img src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-instagram.svg" alt="Instagram" class="h-6">
+      </a>
+      <a href="https://www.facebook.com/swiggy.in/" target="_blank" class="hover:text-orange-500">
+        <img src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-facebook.svg" alt="Facebook" class="h-6">
+      </a>
+      <a href="https://in.pinterest.com/swiggyindia/" target="_blank" class="hover:text-orange-500">
+        <img src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-pinterest.svg" alt="Pinterest" class="h-6">
+      </a>
+      <a href="https://twitter.com/Swiggy" target="_blank" class="hover:text-orange-500">
+        <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Twitter.svg" alt="Twitter" class="h-6">
+      </a>
+    </div>
+    <div class="text-gray-400 mb-4">For a better experience, download the Swiggy app</div>
+    <div class="flex justify-center space-x-4">
+      <a href="https://itunes.apple.com/in/app/id989540920" target="_blank">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv" alt="App Store" class="h-12">
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=in.swiggy.android" target="_blank">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl" alt="Google Play" class="h-12">
+      </a>
+    </div>
+  </div>
+</footer>

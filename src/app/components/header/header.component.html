@@ -1,0 +1,42 @@
+<header class="bg-orange-600 shadow-lg">
+  <div class="max-w-6xl mx-auto px-5 md:px-10">
+    <div class="flex items-center justify-between h-20">
+      <div class="flex items-center">
+        <a routerLink="/home" class="text-2xl font-extrabold flex items-center">
+          <img
+            src="https://res.cloudinary.com/dutdah0l9/image/upload/v1720058694/Swiggy_logo_bml6he.png"
+            alt="Swiggy Logo"
+            class="h-10 w-36 mr-3"
+          />
+        </a>
+      </div>
+      <nav class="flex space-x-5">
+        <a routerLink="/home" class="text-white font-semibold text-base tracking-widest hover:underline">Home</a>
+        <a
+          routerLink="/order"
+          class="text-white font-semibold text-base tracking-widest truncate hover:underline"
+          >Order Something</a
+        >
+        <a routerLink="/cart" class="text-white font-semibold text-base tracking-widest hover:underline">Cart</a>
+        <a routerLink="/favorites" class="text-white font-semibold text-base tracking-widest hover:underline"
+          >Favourites</a
+        >
+        <a
+          *ngIf="!isLoggedIn"
+          routerLink="/login"
+          class="text-white font-semibold text-base tracking-widest hover:underline"
+          >Login</a
+        >
+        <div *ngIf="isLoggedIn" class="flex items-center space-x-2">
+          
+          <button
+            (click)="logout()"
+            class="text-white font-semibold text-base tracking-widest hover:underline"
+          >
+            Logout
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

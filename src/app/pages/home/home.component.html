@@ -1,0 +1,55 @@
+<div class="container mx-auto px-4">
+  <!-- Section: Order Food Options -->
+  <div class="mt-24">
+    <div class="text-2xl font-bold text-orange-500 mx-4 mb-4">Order Our Best Food Options</div>
+    <div class="flex gap-6 overflow-x-auto pb-4 mx-4">
+      @for(foodItem of foodItems; track foodItem.id){
+        <app-menu-item
+          [imageSrc]="foodItem.imageSrc"
+          [itemName]="foodItem.name"
+          [orderPage]="false"
+          [id]="foodItem.id"
+          [price]="0"
+          restaurantID="something"
+          class="min-w-[200px] rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow"
+        />
+      }
+    </div>
+  </div>
+
+  <!-- Section: Instamart Grocery Shopping -->
+  <div class="mt-24">
+    <div class="text-2xl font-bold text-orange-500 mx-4 mb-4">Shop Groceries on Instamart</div>
+    <div class="flex gap-6 overflow-x-auto pb-4 mx-4">
+      @for(item of itemList; track item.id){
+        <app-menu-item
+          [imageSrc]="item.imageSrc"
+          [itemName]="item.name"
+          [orderPage]="false"
+          [id]="item.id"
+          [price]="0"
+          restaurantID="something"
+          class="min-w-[200px] rounded-lg  border-gray-200 hover:shadow-lg transition-shadow"
+        />
+      }
+    </div>
+  </div>
+
+  <!-- Section: Dineout Restaurant Discoveries -->
+  <div class="mt-24 mb-24 mx-2">
+    <div class="text-2xl font-bold text-orange-500 mx-4 mb-4">Discover Best Restaurants on Dineout</div>
+    <div class="flex gap-6 overflow-x-auto w-full pb-4 mx-4">
+      @for(restaurant of restaurantList; track restaurant.id){
+        <app-restaurant-card
+          [name]="restaurant.name"
+          [imageSrc]="restaurant.imageSrc"
+          [cuisines]="restaurant.cuisines"
+          [location]="restaurant.location"
+          [rating]="restaurant.rating"
+          [price]="restaurant.price"
+          class="min-w-[280px] rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow"
+        />
+      }
+    </div>
+  </div>
+</div>
